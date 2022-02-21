@@ -1,0 +1,110 @@
+body
+{  
+    margin: 0;
+    padding: 0;
+}
+.content
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    /* background-color: aqua; */
+    color: azure;
+}
+.calc
+{    
+    width: 25%;
+    height: 85%; 
+    opacity: 95%;
+    background-color: rgb(43, 43, 43);
+}
+.top
+{
+    height: 40%;
+}
+.top>.head
+{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 20%;
+    background-color: blue;
+}
+.top>.head>.headBtn
+{
+    display: flex;
+    margin-left: 10%;
+}
+.top>.head>div>p
+{
+    margin-left: 10%;
+    font-size: 18px;
+}
+.top>.middle
+{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 20%;
+    /* background-color: yellow; */
+}
+.top>.boddy
+{
+    display: flex;
+    justify-content: end;
+    height: 60%;
+    /* background-color: burlywood; */
+}
+.memorize
+{
+    display: flex;
+    height: 5%;
+    /* background-color: blueviolet; */
+}
+.memorize>.memo
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    width: 15.5%;
+    /* background-color: rgb(83, 83, 83); */
+}
+.memorize>.memo:hover
+{
+    background-color: grey;
+}
+.bottom
+{
+    display: flex; 
+    flex-wrap: wrap; 
+    height: 55%;
+}
+.bottom>.btn
+{
+    flex: 20%; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 1%;
+    margin-top: 1%;
+    background-color: black;
+}
+.bottom>.btn:hover
+{
+    background-color: grey;
+}
+.bottom>.operat
+{
+    background-color: rgb(29, 29, 29);
+}
+.bottom>.btnR
+{
+    margin-right: 1%;
+}
+.bottom>.btnB
+{
+    margin-bottom: 1%;
+}
