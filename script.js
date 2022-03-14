@@ -7,37 +7,56 @@ let operateur = '';
 let valeurSuivante = false;
 
 function sendNumberValue(number) {
-    const displaValue = ecran.textContent;
+    const displayValue = ecran.textContent;
     if (valeurSuivante) {
         ecran.textContent = number;
+        valeurSuivante = false;
     } else {
-        if (displaValue === '0') {
+        //si le 
+        if (displayValue === '0') {
             ecran.textContent = number;
         } else {
-            ecran.textContent = displaValue + number;
+            ecran.textContent = displayValue + number;
         }
     }
 }
 
 function addDecimal() {
+    //En cliquant sur un operateur on peut pas ajouter une vergule
+    if (valeurSuivante) return;
     //the includes method to check the string to see if there a specific value
     if (!ecran.textContent.includes('.')) {
         ecran.textContent = `${ecran.textContent}.`
     }
 }
 
+const calcule = {
+    '/': (premierNbr, valeurSuivante) => premierNbr / valeurSuivante,
+    '*': (premierNbr, valeurSuivante) => premierNbr * valeurSuivante,
+    '+': (premierNbr, valeurSuivante) => premierNbr + valeurSuivante,
+    '-': (premierNbr, valeurSuivante) => premierNbr - valeurSuivante,
+    '=': (premierNbr, valeurSuivante) => valeurSuivante
+}
+
 function operations(operation) {
     const valeurActuelle = Number(ecran.textContent);
-    if (!premierNbr) {
+    if (operateur && valeurSuivante) {
+        operateur = operation;
+        return;
+    }
+    if (premierNbr == 0) {
         premierNbr = valeurActuelle;
     } else {
-        console.log('valeur actulle', valeurActuelle)
+        const calculation = calcule[operateur](premierNbr, valeurActuelle);
+        // console.log('calculation', calculation)
+        ecran.textContent = calculation;
+        premierNbr = calculation;
     }
     valeurSuivante = true;
     operateur = operation;
-    console.log('operateur', operateur);
 }
 
+//Event Listner pour les nbrs , operateur et vergule 
 inputBtns.forEach((inputBtn) => {
     if (inputBtn.classList.length === 0) {
         inputBtn.addEventListener('click', function () {
