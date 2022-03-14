@@ -1,71 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
     <title>Calculatrice</title>
 </head>
-
 <body>
-    <div class="content">
-        <div class="calc">
-            <div class="top">
-                <div class="head">
-                    <div><p>Calculatrice</p></div>
-                    <div class="headBtn">
-                        <button>Rdwr</button>
-                        <button>Agrd</button>
-                        <button>clz</button>
-                    </div>
-                </div>
-                <div class="middle">
-                    <button>Menu</button>
-                    <h2>Standard</h2>
-                    <button>tjr V</button>
-                    <button>Hist</button>
-                </div>
-                <div class="boddy">
-                    <h2>4 X 6 = 24</h2>
-                </div>
-            </div>
-            <div class="memorize">
-                <div class="memo">MC</div>
-                <div class="memo">MR</div>
-                <div class="memo">M+</div>
-                <div class="memo">M-</div>
-                <div class="memo">MS</div>
-                <div class="memo">M</div>
-            </div>
-            <div class="bottom">
-                <div class="btn operat">%</div>
-                <div class="btn operat">CE</div>
-                <div class="btn operat">C</div>
-                <div class="btn operat btnR">x</div>
-                <div class="btn operat">1/x</div>
-                <div class="btn operat">x²</div>
-                <div class="btn operat">²√x</div>
-                <div class="btn operat btnR">/</div>
-                <div class="btn">7</div>
-                <div class="btn">8</div>
-                <div class="btn">9</div>
-                <div class="btn operat btnR">X</div>
-                <div class="btn">4</div>
-                <div class="btn">5</div>
-                <div class="btn">6</div>
-                <div class="btn operat btnR">-</div>
-                <div class="btn">1</div>
-                <div class="btn">2</div>
-                <div class="btn">3</div>
-                <div class="btn operat btnR">+</div>
-                <div class="btn btnB">+/-</div>
-                <div class="btn btnB">9</div>
-                <div class="btn btnB">,</div>
-                <div class="btn operat btnR btnB">=</div>
-            </div>
+    <!-- Calculator -->
+    <div class="body">
+        <!-- Display -->
+        <div class="ecran">
+            <h1>0</h1>
+        </div>
+        <!-- Buttons -->
+        <div class="buttons">
+            <button value="7">7</button>
+            <button value="8">8</button>
+            <button value="9">9</button>
+            <button class="operation" value="/">÷</button>
+            <button value="4">4</button>
+            <button value="6">6</button>
+            <button value="5">5</button>
+            <button class="operation" value="+">+</button>
+            <button value="1">1</button>
+            <button value="2">2</button>
+            <button value="3">3</button>
+            <button class="operation" value="-">-</button>
+            <button class="decimal" value=".">.</button>
+            <button value="0">0</button>
+            <button>()</button>
+            <button class="operation" value="*">×</button>
+            <button class="clear" id="clear-btn">C</button>
+            <button class="egal operation" value="=">=</button>
         </div>
     </div>
+    <!-- Script -->
+    <script src="script.js"></script>
 </body>
-
 </html>
