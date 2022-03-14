@@ -4,17 +4,15 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgb(202, 202, 202);
+  background-color: pink;
 }
 .body {
-  background: white;
+  background: rgb(248, 100, 124);
   width: 25%;
   border-radius: 10px;
 }
-/* Display */
 .ecran {
-  background: black;
-  color: white;
+  background: white;
   display: flex;
   align-items: center;
   justify-content: flex-end;
@@ -27,7 +25,6 @@ body {
   font-family: "Lucida Console", sans-serif;
   overflow-x: auto;
 }
-/* Buttons */
 .buttons {
   display: flex; 
   flex-wrap: wrap; 
@@ -38,19 +35,16 @@ button {
   margin: 1%;
   font-size: 20px;
   border: none;
-  background: rgb(200, 200, 200);
+  background: white;
   border-radius: 5px;
   cursor: pointer;
 }
 button:hover {
   background-color: rgb(199, 143, 252);
 }
-/* button:active {
-  transform: translateY(1px);
-} */
 .operation {
   flex: 25%;
-  background: grey;
+  background: pink;
   color: white;
   font-size: 30px;
 }

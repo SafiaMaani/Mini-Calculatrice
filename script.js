@@ -2,6 +2,14 @@ const ecran = document.querySelector('h1');
 const inputBtns = document.querySelectorAll('button');
 const clearBtn = document.getElementById('clear-btn');
 
+const calcule = {
+    '/': (premierNbr, valeurSuivante) => premierNbr / valeurSuivante,
+    '*': (premierNbr, valeurSuivante) => premierNbr * valeurSuivante,
+    '+': (premierNbr, valeurSuivante) => premierNbr + valeurSuivante,
+    '-': (premierNbr, valeurSuivante) => premierNbr - valeurSuivante,
+    '=': (premierNbr, valeurSuivante) => valeurSuivante
+}
+
 let premierNbr = 0;
 let operateur = '';
 let valeurSuivante = false;
@@ -30,14 +38,6 @@ function addDecimal() {
     }
 }
 
-const calcule = {
-    '/': (premierNbr, valeurSuivante) => premierNbr / valeurSuivante,
-    '*': (premierNbr, valeurSuivante) => premierNbr * valeurSuivante,
-    '+': (premierNbr, valeurSuivante) => premierNbr + valeurSuivante,
-    '-': (premierNbr, valeurSuivante) => premierNbr - valeurSuivante,
-    '=': (premierNbr, valeurSuivante) => valeurSuivante
-}
-
 function operations(operation) {
     const valeurActuelle = Number(ecran.textContent);
     if (operateur && valeurSuivante) {
@@ -48,7 +48,6 @@ function operations(operation) {
         premierNbr = valeurActuelle;
     } else {
         const calculation = calcule[operateur](premierNbr, valeurActuelle);
-        // console.log('calculation', calculation)
         ecran.textContent = calculation;
         premierNbr = calculation;
     }
